@@ -1,9 +1,8 @@
 export const Pokemons = () => {
-
   return (
-    <p>
+    <span>
       pokemons
-    </p>
+    </span>
   )
 }
 
