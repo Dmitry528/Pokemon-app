@@ -7,7 +7,14 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import AppRouter from 'AppRouter';
 
 const App = () => {
-  const queryClient: QueryClient = new QueryClient()
+  const queryClient: QueryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        // 5 mins in ms
+        staleTime: 5 * 60 * 1000
+      }
+    }
+  })
 
   return (
     <QueryClientProvider client={queryClient}>

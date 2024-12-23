@@ -13,7 +13,7 @@ enum Paths {
 
 const AppRouter = () => (
   <BrowserRouter>
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<p>Loading async routes...</p>}>
       <Routes>
         <Route element={<RootLayout />}>
           <Route path={Paths.Pokemons} element={<Pokemons />} />
