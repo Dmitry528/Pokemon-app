@@ -6,9 +6,9 @@ import RootLayout from 'shared/components/RootLayout'
 const Pokemons = lazy(() => import(/* webpackChunkName: "pokemons-page" */ 'pokemons/pages/Pokemons'))
 const Pokemon = lazy(() => import(/* webpackChunkName: "pokemon-page" */ 'pokemon/pages/Pokemon'))
 
-enum Paths {
+export enum Paths {
  Pokemons = '/',
- Pokemon = '/pokemon/:id'
+ Pokemon = '/pokemon/:name'
 }
 
 const AppRouter = () => (

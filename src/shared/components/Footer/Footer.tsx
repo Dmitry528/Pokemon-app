@@ -3,7 +3,7 @@ import "./footer.css"
 const Footer = () => {
   return (
     <footer>
-      footer
+      <span>{new Date().getFullYear()}</span>
     </footer>
   )
 }

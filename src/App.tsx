@@ -11,7 +11,8 @@ const App = () => {
     defaultOptions: {
       queries: {
         // 5 mins in ms
-        staleTime: 5 * 60 * 1000
+        staleTime: 5 * 60 * 1000,
+        retry: 0,
       }
     }
   })
