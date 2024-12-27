@@ -1,1 +1,1 @@
-export { default } from 'shared/utils/WithSuspense/WithSuspense'
+export { default } from 'shared/utils/withSuspense/withSuspense'

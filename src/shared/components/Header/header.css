@@ -1,3 +1,22 @@
 header {
   grid-area: header;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #FFFFB7;
+
+  padding: 8px;
+}
+
+header nav {
+  display: flex;
+  gap: 8px;
+
+  text-decoration: none;
+}
+
+header nav .nav-item {
+  text-decoration: none;
 }

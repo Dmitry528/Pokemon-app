@@ -1,18 +1,16 @@
-import { PropsWithChildren, Suspense } from "react"
+import { ComponentType, Suspense } from "react"
 
-interface IWithSuspenseProps extends PropsWithChildren {
+const withSuspense = <P extends Object>(
+  Component: ComponentType<P>,
   fallback: JSX.Element
+) => {
+  return (props: P) => {
+    return (
+      <Suspense fallback={fallback}>
+        <Component {...props} />
+      </Suspense>
+    )
+  }
 }
 
-const WithSuspense = ({
-  fallback,
-  children,
-}: IWithSuspenseProps) => {
-  return (
-    <Suspense fallback={fallback}>
-      {children}
-    </Suspense>
-  )
-}
-
-export default WithSuspense
+export default withSuspense

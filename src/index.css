@@ -7,3 +7,7 @@
 #root {
   height: 100vh;
 }
+
+body > iframe {
+  display: none;
+}
