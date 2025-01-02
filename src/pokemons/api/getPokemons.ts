@@ -1,6 +1,11 @@
 import { PokeAPI } from 'pokeapi-types'
 import { get } from "shared/api/apiService"
 
-export const getPokemons = async (): Promise<PokeAPI.NamedAPIResourceList> => {
-  return await get({ url: 'pokemon?limit=10&offset=0' })
+interface GetPokemonsArgs {
+  itemsPerPage: number
+  offset: number;
+}
+
+export const getPokemons = async ({ itemsPerPage, offset }: GetPokemonsArgs): Promise<PokeAPI.NamedAPIResourceList> => {
+  return await get({ url: `pokemon?limit=${itemsPerPage}&offset=${offset}` })
 }
