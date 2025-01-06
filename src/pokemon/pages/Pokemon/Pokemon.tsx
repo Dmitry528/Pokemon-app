@@ -15,7 +15,7 @@ export const Pokemon = () => {
     queryKey: [queryKeys.Pokemon, name],
   });
 
-  return <p>pokemon: {name}</p>;
+  return <p>pokemon: {pokemon.name}</p>;
 };
 
 export default withErrorBoundary(withSuspense(Pokemon, <Loading />));
