@@ -1,1 +1,1 @@
-export { default } from 'shared/utils/withErrorBoundary/withErrorBoundary'
+export { default } from "shared/utils/withErrorBoundary/withErrorBoundary";

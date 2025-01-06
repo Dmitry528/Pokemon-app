@@ -1,6 +1,6 @@
-import { Link } from "react-router"
-import "./header.css"
-import { Paths } from "AppRouter"
+import { Link } from "react-router";
+import "./header.css";
+import { Paths } from "AppRouter";
 
 const Header = () => {
   return (
@@ -9,10 +9,12 @@ const Header = () => {
         <h1>Pokemon app v1</h1>
       </div>
       <nav>
-        <Link className="nav-item" to={Paths.Pokemons}>Home</Link>
+        <Link className="nav-item" to={Paths.Pokemons}>
+          Home
+        </Link>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

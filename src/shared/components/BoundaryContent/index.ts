@@ -1,1 +1,1 @@
-export { default } from 'shared/components/BoundaryContent/BoundaryContent'
+export { default } from "shared/components/BoundaryContent/BoundaryContent";

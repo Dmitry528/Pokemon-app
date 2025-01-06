@@ -1,11 +1,8 @@
 const enum queryKeys {
-  Pokemons = 'Pokemons',
-  Pokemon = 'Pokemon',
+  Pokemons = "Pokemons",
+  Pokemon = "Pokemon",
 }
 
-const baseUrl = 'https://pokeapi.co/api/v2'
+const baseUrl = "https://pokeapi.co/api/v2";
 
-export {
-  queryKeys,
-  baseUrl,
-}
+export { queryKeys, baseUrl };

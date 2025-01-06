@@ -1,1 +1,1 @@
-export { default } from 'shared/components/Footer/Footer'
+export { default } from "shared/components/Footer/Footer";

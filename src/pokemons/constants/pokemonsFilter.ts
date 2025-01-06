@@ -1,2 +1,2 @@
-export const pokemonsDefaultPage: number = 1;
-export const defaultItemsPerPage: number = 10;
+export const pokemonsDefaultPage = 1;
+export const defaultItemsPerPage = 10;

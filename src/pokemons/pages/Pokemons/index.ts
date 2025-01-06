@@ -1,1 +1,1 @@
-export { default } from 'pokemons/pages/Pokemons/Pokemons'
+export { default } from "pokemons/pages/Pokemons/Pokemons";

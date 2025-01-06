@@ -1,14 +1,14 @@
-import { pokemonsDefaultPage } from 'pokemons/constants/pokemonsFilter';
-import { create } from 'zustand'
-import { devtools, persist } from 'zustand/middleware';
-import { immer } from 'zustand/middleware/immer';
+import { pokemonsDefaultPage } from "pokemons/constants/pokemonsFilter";
+import { create } from "zustand";
+import { devtools, persist } from "zustand/middleware";
+import { immer } from "zustand/middleware/immer";
 
 interface IPokemonsState {
-  page: number
+  page: number;
 }
 
 interface IPokemonsStateActions {
-  setPage: (page: number) => void
+  setPage: (page: number) => void;
 }
 
 const usePokemonsState = create<IPokemonsState & IPokemonsStateActions>()(
@@ -18,18 +18,22 @@ const usePokemonsState = create<IPokemonsState & IPokemonsStateActions>()(
         (set) => ({
           page: pokemonsDefaultPage,
           setPage: (page: number) => {
-            set((state) => {
-              state.page = page
-          }, undefined, {
-          type: 'setPokemonsPage',
-          payload: page
-        })}, 
+            set(
+              (state) => {
+                state.page = page;
+              },
+              undefined,
+              {
+                type: "setPokemonsPage",
+                payload: page,
+              },
+            );
+          },
         }),
-        { name: 'pokemonsState' }
+        { name: "pokemonsState" },
       ),
-    )
-  )
-)
-
+    ),
+  ),
+);
 
 export default usePokemonsState;
