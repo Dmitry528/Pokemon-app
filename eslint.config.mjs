@@ -31,23 +31,13 @@ export default [
       ...tseslint.configs.recommended.rules,
       ...pluginReact.configs.recommended.rules,
       "prettier/prettier": "error",
-      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "error",
       "react/react-in-jsx-scope": "off",
     },
     settings: {
       react: {
         version: "detect",
       },
-    },
-  },
-  {
-    files: ["**/*.{js,jsx}"],
-    languageOptions: {
-      globals: globals.browser,
-    },
-    rules: {
-      ...pluginJs.configs.recommended.rules,
-      ...pluginReact.configs.recommended.rules,
     },
   },
   prettier,
