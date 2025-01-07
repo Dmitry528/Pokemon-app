@@ -1,13 +1,13 @@
-import { Paths } from "AppRouter"
-import { Link } from "react-router"
+import { Paths } from 'AppRouter';
+import { Link } from 'react-router';
 
 interface IBoundaryContentProps {
-  title: string
-  onReset: () => void
+  title: string;
+  onReset: () => void;
   error: {
-    message: string
-  }
-} 
+    message: string;
+  };
+}
 
 export const BoundaryContent = ({
   error,
@@ -21,7 +21,7 @@ export const BoundaryContent = ({
       <Link to={Paths.Pokemons}>Home</Link>
       <pre>{error.message}</pre>
     </div>
-  )
-}
+  );
+};
 
-export default BoundaryContent
+export default BoundaryContent;

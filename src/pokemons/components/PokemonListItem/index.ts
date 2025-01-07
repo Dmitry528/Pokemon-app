@@ -1,1 +1,1 @@
-export { default } from 'pokemons/components/PokemonListItem/PokemonListItem' 
+export { default } from 'pokemons/components/PokemonListItem/PokemonListItem';

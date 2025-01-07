@@ -1,14 +1,12 @@
-import { PokeAPI } from "pokeapi-types";
+import { PokeAPI } from 'pokeapi-types';
 
 interface IPokemon extends PokeAPI.Pokemon {
-  cries: Cries
+  cries: Cries;
 }
 
 type Cries = {
-  latest: string
-  legacy: string
-}
+  latest: string;
+  legacy: string;
+};
 
-export type {
-  IPokemon
-}
+export type { IPokemon };

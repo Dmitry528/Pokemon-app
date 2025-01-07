@@ -1,1 +1,1 @@
-export { default } from 'shared/components/Header/Header'
+export { default } from 'shared/components/Header/Header';

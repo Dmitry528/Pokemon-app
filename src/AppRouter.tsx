@@ -1,14 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router'
-import { lazy, Suspense } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router';
+import { lazy, Suspense } from 'react';
 
-import RootLayout from 'shared/components/RootLayout'
+import RootLayout from 'shared/components/RootLayout';
 
-const Pokemons = lazy(() => import(/* webpackChunkName: "pokemons-page" */ 'pokemons/pages/Pokemons'))
-const Pokemon = lazy(() => import(/* webpackChunkName: "pokemon-page" */ 'pokemon/pages/Pokemon'))
+const Pokemons = lazy(
+  () =>
+    import(/* webpackChunkName: "pokemons-page" */ 'pokemons/pages/Pokemons'),
+);
+const Pokemon = lazy(
+  () => import(/* webpackChunkName: "pokemon-page" */ 'pokemon/pages/Pokemon'),
+);
 
 export enum Paths {
- Pokemons = '/',
- Pokemon = '/pokemon/:name'
+  Pokemons = '/',
+  Pokemon = '/pokemon/:name',
 }
 
 const AppRouter = () => (
@@ -22,6 +27,6 @@ const AppRouter = () => (
       </Routes>
     </Suspense>
   </BrowserRouter>
-)
+);
 
-export default AppRouter
+export default AppRouter;
