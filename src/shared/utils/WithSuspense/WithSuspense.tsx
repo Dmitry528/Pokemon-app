@@ -1,6 +1,6 @@
 import { ComponentType, Suspense } from 'react';
 
-const withSuspense = <P extends object>(
+const withSuspense = <P extends JSX.IntrinsicAttributes>(
   Component: ComponentType<P>,
   fallback: JSX.Element,
 ) => {

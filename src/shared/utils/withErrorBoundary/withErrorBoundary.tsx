@@ -3,7 +3,9 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { ComponentType } from 'react';
 import BoundaryContent from 'shared/components/BoundaryContent';
 
-const withErrorBoundary = <P extends object>(Component: ComponentType<P>) => {
+const withErrorBoundary = <P extends JSX.IntrinsicAttributes>(
+  Component: ComponentType<P>,
+) => {
   const InnerErrorBoundaryComponent = (props: P) => {
     return (
       <QueryErrorResetBoundary>
