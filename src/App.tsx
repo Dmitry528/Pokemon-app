@@ -1,7 +1,7 @@
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import AppRouter from 'AppRouter';
+import AppRouter from 'Appouter';
 
 const App = () => {
   const queryClient: QueryClient = new QueryClient({
@@ -9,7 +9,7 @@ const App = () => {
       queries: {
         // 5 mins in ms
         staleTime: 5 * 60 * 1000,
-        rery: 0,
+        retry: 0,
       },
     },
   });
