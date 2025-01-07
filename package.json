@@ -29,8 +29,7 @@
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "format": "prettier --write src/**/*.{ts,tsx}",
-    "lint": "eslint src/**/*.{ts,tsx} --fix",
-    "prepare": "husky install"
+    "lint": "eslint src/**/*.{ts,tsx} --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -55,8 +54,6 @@
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.3",
     "globals": "^15.14.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
     "pokeapi-types": "^0.0.2",
     "prettier": "^3.4.2",
     "source-map-explorer": "^2.5.3",
