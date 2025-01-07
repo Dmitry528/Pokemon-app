@@ -1,12 +1,8 @@
-import RcPagination, { PaginationProps } from 'rc-pagination'
-import 'rc-pagination/assets/index.css'
+import RcPagination, { PaginationProps } from 'rc-pagination';
+import 'rc-pagination/assets/index.css';
 
 const Pagination = (props: PaginationProps) => {
-  return (
-    <RcPagination
-      {...props}
-    />
-  ) 
-}
+  return <RcPagination {...props} />;
+};
 
-export default Pagination
+export default Pagination;

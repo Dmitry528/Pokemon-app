@@ -1,3 +1,3 @@
 export type PokemonQueryParam = {
-  name: string
-}
+  name: string;
+};

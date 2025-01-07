@@ -1,10 +1,9 @@
-import { Outlet } from "react-router"
+import { Outlet } from 'react-router';
 
-import Header from "shared/components/Header"
-import Footer from "shared/components/Footer"
+import Header from 'shared/components/Header';
+import Footer from 'shared/components/Footer';
 
-import './rootLayout.css'
-
+import './rootLayout.css';
 
 const RootLayout = () => {
   return (
@@ -15,7 +14,7 @@ const RootLayout = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;

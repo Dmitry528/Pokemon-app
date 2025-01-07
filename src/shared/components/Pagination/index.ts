@@ -1,1 +1,1 @@
-export { default } from 'shared/components/Pagination/Pagination'
+export { default } from 'shared/components/Pagination/Pagination';

@@ -1,9 +1,9 @@
-import { PokeAPI } from "pokeapi-types"
+import { PokeAPI } from 'pokeapi-types';
 
-import PokemonListItem from "pokemons/components/PokemonListItem"
+import PokemonListItem from 'pokemons/components/PokemonListItem';
 
 interface IPokemonListProps {
-  pokemons: PokeAPI.NamedAPIResource[]
+  pokemons: PokeAPI.NamedAPIResource[];
 }
 
 const PokemonList = ({ pokemons }: IPokemonListProps) => {
@@ -13,7 +13,7 @@ const PokemonList = ({ pokemons }: IPokemonListProps) => {
         <PokemonListItem pokemon={pokemon} key={pokemon.name} />
       ))}
     </>
-  )
-}
+  );
+};
 
-export default PokemonList
+export default PokemonList;

@@ -1,1 +1,1 @@
-export { default } from 'pokemon/components/Loading/Loading'
+export { default } from 'pokemon/components/Loading/Loading';

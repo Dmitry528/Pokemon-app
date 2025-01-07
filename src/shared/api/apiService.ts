@@ -1,7 +1,7 @@
-import { baseUrl } from "shared/constants/api";
+import { baseUrl } from 'shared/constants/api';
 
 interface IGetArguments {
-  url: string
+  url: string;
 }
 
 export const get = async ({ url }: IGetArguments) => {
@@ -9,10 +9,10 @@ export const get = async ({ url }: IGetArguments) => {
     const response = await fetch(`${baseUrl}/${url}`, {
       method: 'GET',
     });
-  
+
     return response.json();
   } catch (error) {
-    console.error(error)
+    console.error(error);
     throw new Error(`Something went wrong during getting data, url: ${url}`);
   }
 };
