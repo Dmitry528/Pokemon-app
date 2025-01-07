@@ -3,8 +3,8 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { ComponentType } from 'react';
 import BoundaryContent from 'shared/components/BoundaryContent';
 
-const withErrorBoundary = <P extends Object>(Component: ComponentType<P>) => {
-  return (props: P) => {
+const withErrorBoundary = <P extends object>(Component: ComponentType<P>) => {
+  const InnerErrorBoundaryComponent = (props: P) => {
     return (
       <QueryErrorResetBoundary>
         {({ reset }) => (
@@ -24,6 +24,8 @@ const withErrorBoundary = <P extends Object>(Component: ComponentType<P>) => {
       </QueryErrorResetBoundary>
     );
   };
+
+  return InnerErrorBoundaryComponent;
 };
 
 export default withErrorBoundary;

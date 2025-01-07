@@ -1,16 +1,18 @@
 import { ComponentType, Suspense } from 'react';
 
-const withSuspense = <P extends Object>(
+const withSuspense = <P extends object>(
   Component: ComponentType<P>,
   fallback: JSX.Element,
 ) => {
-  return (props: P) => {
+  const InnerSuspenseComponent = (props: P) => {
     return (
       <Suspense fallback={fallback}>
         <Component {...props} />
       </Suspense>
     );
   };
+
+  return InnerSuspenseComponent;
 };
 
 export default withSuspense;

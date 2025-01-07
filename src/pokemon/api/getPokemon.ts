@@ -1,4 +1,3 @@
-import { PokeAPI } from 'pokeapi-types';
 import { IPokemon } from 'pokemon/types/pokemon';
 import { PokemonQueryParam } from 'pokemon/types/queryParams';
 import { get } from 'shared/api/apiService';
