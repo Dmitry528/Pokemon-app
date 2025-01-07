@@ -9,7 +9,7 @@ const App = () => {
       queries: {
         // 5 mins in ms
         staleTime: 5 * 60 * 1000,
-        retry: 0,
+        rery: 0,
       },
     },
   });
