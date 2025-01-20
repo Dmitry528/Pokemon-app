@@ -8,7 +8,9 @@ import withSuspense from 'shared/utils/withSuspense';
 import usePokemonsState from 'pokemons/store/pokemons.state';
 import { computePaginationOffset } from 'shared/helpers/computePaginationOffset';
 import Pagination from 'shared/components/Pagination';
-import { defaultItemsPerPage } from 'pokemons/constants/pokemonsFilter';
+import { sizeChangerOptions } from 'pokemons/constants/pokemonsFilter';
+import TotalInfo from 'pokemons/components/TotalInfo';
+import ItemsPerPage from 'pokemons/components/ItemsPerPage';
 
 export const Pokemons = () => {
   const page: number = usePokemonsState((state) => state.page);
@@ -16,19 +18,25 @@ export const Pokemons = () => {
     (state) => state.setPage,
   );
 
+  const itemsPerPage: number = usePokemonsState((state) => state.itemsPerPage);
+  const setItemsPerPage: (itemsPerPage: number) => void = usePokemonsState(
+    (state) => state.setItemsPerPage,
+  );
+
   const {
     data: { results: pokemons, count },
   } = useSuspenseQuery({
     queryFn: () =>
       getPokemons({
-        itemsPerPage: defaultItemsPerPage,
-        offset: computePaginationOffset(page, defaultItemsPerPage),
+        itemsPerPage: itemsPerPage,
+        offset: computePaginationOffset(page, itemsPerPage),
       }),
-    queryKey: [queryKeys.Pokemons, { page }],
+    queryKey: [queryKeys.Pokemons, { page, itemsPerPage }],
   });
 
-  const handleOnChange = (newPage: number): void => {
+  const handleOnChange = (newPage: number, pageSize: number): void => {
     setPage(newPage);
+    setItemsPerPage(pageSize);
   };
 
   return (
@@ -36,13 +44,16 @@ export const Pokemons = () => {
       <PokemonList pokemons={pokemons} />
       <Pagination
         current={page}
+        pageSize={itemsPerPage}
         total={count}
-        onChange={handleOnChange}
-        showTotal={(total: number, [from, to]: number[]) => (
-          <p>
-            Showing {from}-{to} of {total}
-          </p>
+        pageSizeOptions={sizeChangerOptions}
+        showTotal={(...totalInfoProps) => (
+          <TotalInfo options={totalInfoProps} />
         )}
+        sizeChangerRender={(itemsPerPageFilterProps) => (
+          <ItemsPerPage settings={itemsPerPageFilterProps} />
+        )}
+        onChange={handleOnChange}
         align="center"
       />
     </>
