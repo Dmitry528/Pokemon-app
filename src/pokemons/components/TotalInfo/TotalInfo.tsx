@@ -1,4 +1,4 @@
-import type { PaginationProps } from 'rc-pagination';
+import { type PaginationProps } from 'rc-pagination';
 
 interface ITotalInfoProps {
   options: Parameters<NonNullable<PaginationProps['showTotal']>>;

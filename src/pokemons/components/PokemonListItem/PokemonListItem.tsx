@@ -1,5 +1,5 @@
 import { Paths } from 'AppRouter';
-import { PokeAPI } from 'pokeapi-types';
+import { type PokeAPI } from 'pokeapi-types';
 import { generatePath, Link } from 'react-router';
 
 interface IPokemonListItemProps {

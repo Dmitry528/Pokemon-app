@@ -1,4 +1,4 @@
-import { PokeAPI } from 'pokeapi-types';
+import { type PokeAPI } from 'pokeapi-types';
 import { get } from 'shared/api/apiService';
 
 interface GetPokemonsArgs {

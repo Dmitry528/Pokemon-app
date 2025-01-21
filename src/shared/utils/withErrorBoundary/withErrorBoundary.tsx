@@ -1,6 +1,6 @@
 import { QueryErrorResetBoundary } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
-import { ComponentType } from 'react';
+import { type ComponentType } from 'react';
 import BoundaryContent from 'shared/components/BoundaryContent';
 
 const withErrorBoundary = <P extends JSX.IntrinsicAttributes>(

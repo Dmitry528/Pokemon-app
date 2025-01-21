@@ -33,4 +33,15 @@ export default [
     },
     rules: hooksPlugin.configs.recommended.rules,
   },
+  {
+    rules: {
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+          fixStyle: 'inline-type-imports',
+        },
+      ],
+    },
+  },
 ];

@@ -1,4 +1,4 @@
-import { ComponentType, Suspense } from 'react';
+import { type ComponentType, Suspense } from 'react';
 
 const withSuspense = <P extends JSX.IntrinsicAttributes>(
   Component: ComponentType<P>,
