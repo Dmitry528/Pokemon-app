@@ -1,8 +1,9 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
-import { getPokemon } from 'pokemon/api/getPokemon';
-import { type PokemonQueryParam } from 'pokemon/types/queryParams';
-import Loading from 'pokemon/components/Loading';
 import { useParams } from 'react-router';
+
+import { getPokemon } from 'pokemon/api/getPokemon';
+import Loading from 'pokemon/components/Loading';
+import { type PokemonQueryParam } from 'pokemon/types/queryParams';
 import { queryKeys } from 'shared/constants/api';
 import withErrorBoundary from 'shared/utils/withErrorBoundary';
 import withSuspense from 'shared/utils/withSuspense';

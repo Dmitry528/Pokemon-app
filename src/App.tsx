@@ -1,6 +1,6 @@
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
 import AppRouter from 'AppRouter';
 
 const App = () => {

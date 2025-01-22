@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
 import { lazy, Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router';
 
 import RootLayout from 'shared/components/RootLayout';
 

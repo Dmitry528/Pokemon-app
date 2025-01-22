@@ -52,6 +52,7 @@
     "globals": "^15.14.0",
     "pokeapi-types": "^0.0.2",
     "prettier": "^3.4.2",
+    "prettier-plugin-sort-imports": "^1.8.6",
     "source-map-explorer": "^2.5.3",
     "typescript-eslint": "^8.19.1"
   }

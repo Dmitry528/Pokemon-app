@@ -1,5 +1,6 @@
-import { Paths } from 'AppRouter';
 import { Link } from 'react-router';
+
+import { Paths } from 'AppRouter';
 
 interface IBoundaryContentProps {
   title: string;

@@ -1,10 +1,11 @@
+import { create } from 'zustand';
+import { devtools, persist } from 'zustand/middleware';
+import { immer } from 'zustand/middleware/immer';
+
 import {
   defaultItemsPerPage,
   pokemonsDefaultPage,
 } from 'pokemons/constants/pokemonsFilter';
-import { create } from 'zustand';
-import { devtools, persist } from 'zustand/middleware';
-import { immer } from 'zustand/middleware/immer';
 
 interface IPokemonsState {
   page: number;

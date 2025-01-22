@@ -1,16 +1,17 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
-import Loading from 'pokemons/components/Loading';
+
 import { getPokemons } from 'pokemons/api/getPokemons';
+import ItemsPerPage from 'pokemons/components/ItemsPerPage';
+import Loading from 'pokemons/components/Loading';
 import PokemonList from 'pokemons/components/PokemonList';
+import TotalInfo from 'pokemons/components/TotalInfo';
+import { sizeChangerOptions } from 'pokemons/constants/pokemonsFilter';
+import usePokemonsState from 'pokemons/store/pokemons.state';
+import Pagination from 'shared/components/Pagination';
 import { queryKeys } from 'shared/constants/api';
+import { computePaginationOffset } from 'shared/helpers/computePaginationOffset';
 import withErrorBoundary from 'shared/utils/withErrorBoundary';
 import withSuspense from 'shared/utils/withSuspense';
-import usePokemonsState from 'pokemons/store/pokemons.state';
-import { computePaginationOffset } from 'shared/helpers/computePaginationOffset';
-import Pagination from 'shared/components/Pagination';
-import { sizeChangerOptions } from 'pokemons/constants/pokemonsFilter';
-import TotalInfo from 'pokemons/components/TotalInfo';
-import ItemsPerPage from 'pokemons/components/ItemsPerPage';
 
 export const Pokemons = () => {
   const page: number = usePokemonsState((state) => state.page);
