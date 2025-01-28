@@ -1,4 +1,4 @@
-header {
+.header {
   grid-area: header;
 
   display: flex;
@@ -10,13 +10,13 @@ header {
   padding: 8px;
 }
 
-header nav {
+.nav {
   display: flex;
   gap: 8px;
 
   text-decoration: none;
 }
 
-header nav .nav-item {
+.navItem {
   text-decoration: none;
 }

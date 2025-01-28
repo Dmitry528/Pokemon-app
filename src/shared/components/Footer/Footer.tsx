@@ -1,8 +1,8 @@
-import './footer.css';
+import footerStyles from 'shared/components/Footer/Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={footerStyles.footer}>
       <span>{new Date().getFullYear()}</span>
     </footer>
   );

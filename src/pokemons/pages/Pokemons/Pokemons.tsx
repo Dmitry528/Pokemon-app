@@ -6,6 +6,7 @@ import Loading from 'pokemons/components/Loading';
 import PokemonList from 'pokemons/components/PokemonList';
 import TotalInfo from 'pokemons/components/TotalInfo';
 import { sizeChangerOptions } from 'pokemons/constants/pokemonsFilter';
+import pokemonStyles from 'pokemons/pages/Pokemons/Pokemons.module.css';
 import usePokemonsState from 'pokemons/store/pokemons.state';
 import Pagination from 'shared/components/Pagination';
 import { queryKeys } from 'shared/constants/api';
@@ -41,23 +42,30 @@ export const Pokemons = () => {
   };
 
   return (
-    <>
-      <PokemonList pokemons={pokemons} />
-      <Pagination
-        current={page}
-        pageSize={itemsPerPage}
-        total={count}
-        pageSizeOptions={sizeChangerOptions}
-        showTotal={(...totalInfoProps) => (
-          <TotalInfo options={totalInfoProps} />
-        )}
-        sizeChangerRender={(itemsPerPageFilterProps) => (
-          <ItemsPerPage settings={itemsPerPageFilterProps} />
-        )}
-        onChange={handleOnChange}
-        align="center"
-      />
-    </>
+    <div className={pokemonStyles.pokemons}>
+      <div className={pokemonStyles.pokemonsList}>
+        <PokemonList pokemons={pokemons} />
+      </div>
+      <div className={pokemonStyles.pagination}>
+        <Pagination
+          current={page}
+          pageSize={itemsPerPage}
+          total={count}
+          pageSizeOptions={sizeChangerOptions}
+          showTotal={(...totalInfoProps) => (
+            <TotalInfo options={totalInfoProps} />
+          )}
+          sizeChangerRender={(itemsPerPageFilterProps) => (
+            <ItemsPerPage settings={itemsPerPageFilterProps} />
+          )}
+          locale={{
+            items_per_page: 'items per page',
+          }}
+          onChange={handleOnChange}
+          align="center"
+        />
+      </div>
+    </div>
   );
 };
 

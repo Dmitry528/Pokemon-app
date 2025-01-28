@@ -1,0 +1,25 @@
+.pokemon {
+  display: grid;
+
+  height: 100%;
+  grid-template-areas:
+    'pokemonName'
+    'pokemonViews';
+
+  grid-template-rows: auto 1fr;
+}
+
+.pokemonName {
+  grid-area: pokemonName;
+
+  padding: 24px 0px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pokemonViews {
+  grid-area: pokemonViews;
+  grid-template: repeat(2, max-content) / repeat(4, minmax(150px, 1fr));
+  gap: 24px;
+  display: grid;
+}
