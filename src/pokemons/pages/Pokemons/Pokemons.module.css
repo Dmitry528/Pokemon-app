@@ -1,0 +1,18 @@
+.pokemons {
+  display: grid;
+  height: 100%;
+  grid-template-areas:
+    'pokemonsList'
+    'pagination';
+
+  grid-template-rows: 1fr auto;
+}
+
+.pokemonsList {
+  grid-area: pokemonsList;
+}
+
+.pagination {
+  grid-area: pagination;
+  padding: 24px 0px;
+}

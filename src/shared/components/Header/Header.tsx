@@ -1,19 +1,19 @@
 import { Link } from 'react-router';
 
-import './header.css';
 import { Paths } from 'AppRouter';
+import headerStyles from 'shared/components/Header/Header.module.css';
 
 const Header = () => {
   return (
-    <header>
-      <div>
-        <h1>Pokemon app v1</h1>
-      </div>
-      <nav>
-        <Link className="nav-item" to={Paths.Pokemons}>
+    <header className={headerStyles.header}>
+      <nav className={headerStyles.nav}>
+        <Link className={headerStyles.navItem} to={Paths.Pokemons}>
           Home
         </Link>
       </nav>
+      <div>
+        <h1>Pokemon app v1</h1>
+      </div>
     </header>
   );
 };

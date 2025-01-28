@@ -3,13 +3,13 @@ import { Outlet } from 'react-router';
 import Footer from 'shared/components/Footer';
 import Header from 'shared/components/Header';
 
-import './rootLayout.css';
+import rootLayoutStyles from 'shared/components/RootLayout/RootLayout.module.css';
 
 const RootLayout = () => {
   return (
-    <div className="root-layout">
+    <div className={rootLayoutStyles.rootLayout}>
       <Header />
-      <main>
+      <main className={rootLayoutStyles.main}>
         <Outlet />
       </main>
       <Footer />
