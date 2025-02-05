@@ -15,7 +15,7 @@ export const Pokemon = () => {
   const { name } = useParams<PokemonQueryParam>();
 
   const { data: pokemon } = useSuspenseQuery({
-    queryFn: () => getPokemon({ name: name || 'hello' }),
+    queryFn: () => getPokemon({ name: name! }),
     queryKey: [queryKeys.Pokemon, name],
   });
 

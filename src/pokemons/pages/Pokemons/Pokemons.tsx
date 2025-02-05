@@ -5,6 +5,7 @@ import ItemsPerPage from 'pokemons/components/ItemsPerPage';
 import Loading from 'pokemons/components/Loading';
 import PokemonList from 'pokemons/components/PokemonList';
 import TotalInfo from 'pokemons/components/TotalInfo';
+import { PokemonsDataTestId } from 'pokemons/constants/data-testid';
 import { sizeChangerOptions } from 'pokemons/constants/pokemonsFilter';
 import pokemonStyles from 'pokemons/pages/Pokemons/Pokemons.module.css';
 import usePokemonsState from 'pokemons/store/pokemons.state';
@@ -42,11 +43,20 @@ export const Pokemons = () => {
   };
 
   return (
-    <div className={pokemonStyles.pokemons}>
-      <div className={pokemonStyles.pokemonsList}>
+    <div
+      className={pokemonStyles.pokemons}
+      data-testid={PokemonsDataTestId.PokemonsPage}
+    >
+      <div
+        className={pokemonStyles.pokemonsList}
+        data-testid={PokemonsDataTestId.PokemonsList}
+      >
         <PokemonList pokemons={pokemons} />
       </div>
-      <div className={pokemonStyles.pagination}>
+      <div
+        className={pokemonStyles.pagination}
+        data-testid={PokemonsDataTestId.PokemonsPagination}
+      >
         <Pagination
           current={page}
           pageSize={itemsPerPage}
