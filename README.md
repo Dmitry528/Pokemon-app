@@ -1,13 +1,12 @@
-Poke app which uses https://pokeapi.co/docs/v2
+Tech Stack:
+React – Frontend library for building the user interface.
+TanStack Query – Server state management for fetching, caching, and synchronizing data.
+Zustand – UI state management for handling local component state.
+TypeScript – Static typing for better developer experience and safer code.
+Jest + React Testing Library – Unit and integration testing for React components.
+MSW (Mock Service Worker) – API mocking to simulate responses during tests.
 
-Stack:
-1. Tanstack query as server state manager
-2. Zustand as UI state manager.
-3. Jest + RTL for testing
-4. MSW for mocking Api calls in order to return mocked response (used during test execution)
-5. Typescript
-
-Usefull tools:
-1. Eslint - flat config for checking code
-2. Prettier - formatting code
-3. Husky - executing eslint + prettier + tests before commit.
+Development Tools:
+ESLint (Flat config) – Code linting to maintain consistency and prevent bugs.
+Prettier – Code formatting to keep the codebase clean and consistent.
+Husky – Git hooks for automatically running ESLint, Prettier, and tests before each commit.
